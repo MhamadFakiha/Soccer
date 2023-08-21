@@ -1,0 +1,92 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+canvas{
+    box-sizing: border-box;
+    background: url('Media/background.jpg');
+    background-repeat: none;
+    background-size:cover;
+    background-position: center;
+}
+
+.record{
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 2vh;
+}
+
+.result{
+    font-size: 10vh;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background: linear-gradient(90deg, yellow, green);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.timer{
+    font-size: 10vh;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background: linear-gradient(90deg, yellow, red);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.goal{
+    position: absolute; 
+    top: 30%;
+    width: 100%;
+    text-align: center;
+}
+.goal span {
+    position: relative;
+    display: inline-block;
+    font-size: 12vh;
+    font-weight: bolder;
+    background: linear-gradient(60deg,yellow,green);
+    -webkit-background-clip: text;
+    color: transparent;
+     animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+@keyframes flip {
+    0%{
+        transform: scale(1);
+    }
+    40%{
+        font-size: 20vh;
+    }
+    80%{
+        transform: scale(1);
+    }
+  }
+
+  .end{
+    position: absolute; 
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    font-size: 12vh;
+    font-weight: bolder;
+    background: linear-gradient(60deg,yellow,red);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: flip 2s infinite;
+  }
+@keyframes flip {
+    0%{
+        transform: scale(1);
+    }
+    40%{
+        font-size: 13vh;
+    }
+    80%{
+        transform: scale(1);
+    }
+  }
